@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--加载资源文件 用户图片上传-->
+    <context:property-placeholder location="classpath:properties/*.properties"/>
+
+<!--类型转换器-->
+    <mvc:annotation-driven>
+        <!--使用第三方类型转换器 json解析器 fastjson-->
+        <mvc:message-converters register-defaults="true">
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <!--指定响应结果为json-->
+                <property name="supportedMediaTypes" value="application/json"/>
+                <!--类型转换-->
+                <property name="features">
+                    <array>
+                        <value>WriteMapNullValue</value>
+                        <value>WriteDateUseDateFormat</value>
+                    </array>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!-- 配置多媒体解析器 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+        <property name="maxUploadSize" value="5242880"></property>
+    </bean>
+
+
+    <!-- 引用dubbo 服务 -->
+    <dubbo:application name="pinyougou-web-shop" />
+    <dubbo:registry address="zookeeper://192.168.200.128:2181"/>
+    <dubbo:annotation package="cn.itcast.core.controller" />
+    <!-- 超时全局设置   10分钟   check=false不检查服务提供方-->
+    <dubbo:consumer timeout="600000" check="false"/>
+
+
+</beans>
