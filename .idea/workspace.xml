@@ -7,19 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6712000-a735-45a8-b53f-0384094601e1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pingyougou-common/pingyougou-common.iml" afterPath="$PROJECT_DIR$/pingyougou-common/pingyougou-common.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-dao/pingyougou-dao.iml" afterPath="$PROJECT_DIR$/pingyougou-dao/pingyougou-dao.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-interface/pingyougou-interface.iml" afterPath="$PROJECT_DIR$/pingyougou-interface/pingyougou-interface.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-pojo/pingyougou-pojo.iml" afterPath="$PROJECT_DIR$/pingyougou-pojo/pingyougou-pojo.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-buyer/pingyougou-service-buyer.iml" afterPath="$PROJECT_DIR$/pingyougou-service-buyer/pingyougou-service-buyer.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-page/pingyougou-service-page.iml" afterPath="$PROJECT_DIR$/pingyougou-service-page/pingyougou-service-page.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-search/pingyougou-service-search.iml" afterPath="$PROJECT_DIR$/pingyougou-service-search/pingyougou-service-search.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-sellergoods/pingyougou-service-sellergoods.iml" afterPath="$PROJECT_DIR$/pingyougou-service-sellergoods/pingyougou-service-sellergoods.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-user/pingyougou-service-user.iml" afterPath="$PROJECT_DIR$/pingyougou-service-user/pingyougou-service-user.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-manger/pingyougou-web-manger.iml" afterPath="$PROJECT_DIR$/pingyougou-web-manger/pingyougou-web-manger.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-portal/pingyougou-web-portal.iml" afterPath="$PROJECT_DIR$/pingyougou-web-portal/pingyougou-web-portal.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-shop/pingyougou-web-shop.iml" afterPath="$PROJECT_DIR$/pingyougou-web-shop/pingyougou-web-shop.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-user/pingyougou-web-user.iml" afterPath="$PROJECT_DIR$/pingyougou-web-user/pingyougou-web-user.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/pingyougou-web-manger/target/" />
     <ignored path="$PROJECT_DIR$/pingyougou-service-search/target/" />
@@ -390,7 +378,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549952969273</updated>
-      <workItem from="1549952970562" duration="1350000" />
+      <workItem from="1549952970562" duration="1531000" />
     </task>
     <task id="LOCAL-00001" summary="第一次上传">
       <created>1549953400297</created>
@@ -403,7 +391,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1350000" />
+    <option name="totallyTimeSpent" value="1531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1065" extended-state="6" />
