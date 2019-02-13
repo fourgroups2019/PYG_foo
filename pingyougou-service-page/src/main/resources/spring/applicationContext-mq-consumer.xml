@@ -29,5 +29,19 @@
 		<property name="messageListener" ref="pageListener" />
 	</bean>
 	<bean id="pageListener" class="cn.itcast.core.listener.PageListener"></bean>
+
+
+	<!-- 点对点模式，删除索引库-->
+	<bean id="queueStaticDeleteDestination" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg value="pinyougou_queue_static_delete"/>
+	</bean>
+
+	<!-- 点对点模式, 消息监听容器  删除索引库-->
+	<bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destination" ref="queueStaticDeleteDestination" />
+		<property name="messageListener" ref="itemDeleteListener" />
+	</bean>
+	<bean id="itemDeleteListener" class="cn.itcast.core.listener.goodsDeleteListener"></bean>
 	
 </beans>
