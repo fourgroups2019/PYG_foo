@@ -31,10 +31,10 @@ public class BrandController {
     /**
      * 品牌申请
      * @param brand
-     * @return
+                * @return
      */
-    @RequestMapping("/add.do")
-    public Result add(@RequestBody Brand brand){
+        @RequestMapping("/add.do")
+        public Result add(@RequestBody Brand brand){
         try {
             brandService.add(brand);
             return new Result(true,"保存成功");
