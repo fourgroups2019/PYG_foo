@@ -64,6 +64,10 @@ public class GoodsServiceIpml implements GoodsService {
     @Resource
     private Destination queueSolrDeleteDestination;
 
+    @Resource
+    private Destination queueStaticDeleteDestination;
+
+
     @Transactional
     @Override
     public void add(GoodsVo goodsVo) {
@@ -309,7 +313,18 @@ public class GoodsServiceIpml implements GoodsService {
 //                SimpleQuery query = new SimpleQuery("item_goodsid:"+id);
 //                solrTemplate.delete(query);
 //                solrTemplate.commit();
+                //TODO
                 // 删除静态页面(不删除静态页)
+                if (goods.getIsDelete()=="1"){
+                    //删除静态页面
+                  jmsTemplate.send(queueStaticDeleteDestination, new MessageCreator() {
+                      @Override
+                      public Message createMessage(Session session) throws JMSException {
+                          TextMessage textMessage = session.createTextMessage(String.valueOf(id));
+                          return textMessage;
+                      }
+                  });
+                }
                 //删除索引库中的数据  1,发送消息到消息队列
                 jmsTemplate.send(queueSolrDeleteDestination, new MessageCreator() {
                     @Override

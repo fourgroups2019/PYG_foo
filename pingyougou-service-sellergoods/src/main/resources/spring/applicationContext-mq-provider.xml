@@ -34,4 +34,9 @@
         <constructor-arg value="pinyougou_queue_solr_delete"/>
     </bean>
 
+    <!-- 点对点模式，删除静态页面-->
+    <bean id="queueStaticDeleteDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="pinyougou_queue_static_delete"/>
+    </bean>
+
 </beans>

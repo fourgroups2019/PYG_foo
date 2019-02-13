@@ -57,4 +57,16 @@ public class GoodsController {
             return new Result(false,"更新失败");
         }
     }
+
+    //删除商品 下架
+    @RequestMapping("/delete.do")
+    public Result delete(Long[] ids){
+        try {
+            goodsService.delete(ids);
+            return new Result(true,"删除成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Result(false,"删除失败");
+        }
+    }
 }

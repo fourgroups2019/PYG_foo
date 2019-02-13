@@ -83,6 +83,17 @@ public class StaticPageServiceImpl implements StaticPageService, ServletContextA
 
     }
 
+    @Override
+    public void deleteHtml(Long ids) {
+        String pathname = "/" + ids + ".html";
+        String realPath = servletContext.getRealPath(pathname);
+        File file = new File(realPath);
+        if (file.exists()&&file.isFile()){
+            file.delete();
+        }
+    }
+
+
     // 获取业务数据
     private Map<String,Object> getDataModel(Long id) {
         Map<String,Object> dataModel = new HashMap<>();
