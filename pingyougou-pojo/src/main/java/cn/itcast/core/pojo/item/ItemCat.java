@@ -1,6 +1,7 @@
 package cn.itcast.core.pojo.item;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class ItemCat implements Serializable {
     /**
@@ -22,6 +23,18 @@ public class ItemCat implements Serializable {
      * 类型id
      */
     private Long typeId;
+    /**
+     * 审核状态
+     */
+    private int status;
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     private static final long serialVersionUID = 1L;
 
@@ -53,51 +66,29 @@ public class ItemCat implements Serializable {
         return typeId;
     }
 
-    public void setTypeId(Long typeId) {
-        this.typeId = typeId;
-    }
-
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", parentId=").append(parentId);
-        sb.append(", name=").append(name);
-        sb.append(", typeId=").append(typeId);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
+        return "ItemCat{" +
+                "status=" + status +
+                '}';
     }
 
     @Override
-    public boolean equals(Object that) {
-        if (this == that) {
-            return true;
-        }
-        if (that == null) {
-            return false;
-        }
-        if (getClass() != that.getClass()) {
-            return false;
-        }
-        ItemCat other = (ItemCat) that;
-        return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getParentId() == null ? other.getParentId() == null : this.getParentId().equals(other.getParentId()))
-            && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
-            && (this.getTypeId() == null ? other.getTypeId() == null : this.getTypeId().equals(other.getTypeId()));
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ItemCat itemCat = (ItemCat) o;
+        return status == itemCat.status;
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getParentId() == null) ? 0 : getParentId().hashCode());
-        result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
-        result = prime * result + ((getTypeId() == null) ? 0 : getTypeId().hashCode());
-        return result;
+
+        return Objects.hash(status);
     }
+
+    public void setTypeId(Long typeId) {
+        this.typeId = typeId;
+    }
+
 }

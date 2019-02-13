@@ -49,4 +49,24 @@ public class ItemCatServiceImpl implements ItemCatService {
     public void add(ItemCat itemCat) {
         itemCatDao.insertSelective(itemCat);
     }
+
+    /**
+     * 分类审核
+     * @param ids
+     * @param status
+     */
+    @Override
+    public void updateStatus(Long[] ids, String status) {
+        if (ids != null && ids.length > 0) {
+            int i = Integer.parseInt(status);
+            ItemCat itemCat = new ItemCat();
+            itemCat.setStatus(i);
+            for (Long id : ids) {
+                itemCat.setId(id);
+                //更新分类
+                itemCatDao.updateByPrimaryKeySelective(itemCat);
+            }
+        }
+
+    }
 }

@@ -55,6 +55,8 @@
 				<div class="btn-group">
 					<button type="button" class="btn btn-default" title="新建" ng-click="entity={}" data-toggle="modal" data-target="#editModal" ><i class="fa fa-file-o"></i> 新建</button>
 					<button type="button" class="btn btn-default" title="删除" ><i class="fa fa-trash-o"></i> 删除</button>
+					<button type="button" ng-click="updateStatus('1')" class="btn btn-default" title="审核通过" ><i class="fa fa-check"></i> 审核通过</button>
+					<button type="button" ng-click="updateStatus('2')" class="btn btn-default" title="驳回" ><i class="fa fa-ban"></i> 驳回</button>
 					<button type="button" class="btn btn-default" title="刷新" ><i class="fa fa-check"></i> 刷新</button>
 
 				</div>
@@ -72,17 +74,24 @@
 				<th class="sorting_asc">分类ID</th>
 				<th class="sorting">分类名称</th>
 				<th class="sorting">类型模板ID</th>
+				<th class="sorting">审核状态</th>
 
 				<th class="text-center">操作</th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr ng-repeat="entity in list">
-				<td><input  type="checkbox" ></td>
+				<td><input  ng-click="updateSelection($event,entity.id)" type="checkbox" ></td>
 				<td>{{entity.id}}</td>
 				<td>{{entity.name}}</td>
 				<td>
 					{{entity.typeId}}
+				</td>
+				<td>
+		                                  	<span>
+		                                  		{{status[entity.status]}}
+		                                  	</span>
+
 				</td>
 				<td class="text-center">
 			                                  <span ng-if="grade != 3">

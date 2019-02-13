@@ -19,4 +19,10 @@ public interface ItemCatService {
      */
     public void add(ItemCat itemCat);
 
+    /**
+     * 分类审核
+     * @param ids
+     * @param status
+     */
+    void updateStatus(Long[] ids, String status);
 }
