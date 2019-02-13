@@ -80,7 +80,6 @@ public class BrandServiceImpl implements BrandService {
                 brandDao.deleteByPrimaryKey(id);
             }
 
-
         }
     }
     //新增规格时初始化品牌列表
