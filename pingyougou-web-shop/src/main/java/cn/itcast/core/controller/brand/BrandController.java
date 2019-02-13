@@ -27,6 +27,12 @@ public class BrandController {
     public PageResult search(Integer pageNo, Integer pageSize, @RequestBody Brand brand){
         return brandService.search(pageNo,pageSize,brand);
     }
+
+    /**
+     * 品牌申请
+     * @param brand
+     * @return
+     */
     @RequestMapping("/add.do")
     public Result add(@RequestBody Brand brand){
         try {
