@@ -8,27 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6712000-a735-45a8-b53f-0384094601e1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-common/pingyougou-common.iml" afterPath="$PROJECT_DIR$/pingyougou-common/pingyougou-common.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-dao/pingyougou-dao.iml" afterPath="$PROJECT_DIR$/pingyougou-dao/pingyougou-dao.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-dao/src/main/resources/cn/itcast/core/dao/item/ItemCatDao.xml" afterPath="$PROJECT_DIR$/pingyougou-dao/src/main/resources/cn/itcast/core/dao/item/ItemCatDao.xml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-interface/pingyougou-interface.iml" afterPath="$PROJECT_DIR$/pingyougou-interface/pingyougou-interface.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-interface/src/main/java/cn/itcast/core/service/itemcat/ItemCatService.java" afterPath="$PROJECT_DIR$/pingyougou-interface/src/main/java/cn/itcast/core/service/itemcat/ItemCatService.java" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-pojo/pingyougou-pojo.iml" afterPath="$PROJECT_DIR$/pingyougou-pojo/pingyougou-pojo.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-pojo/src/main/java/cn/itcast/core/pojo/item/ItemCat.java" afterPath="$PROJECT_DIR$/pingyougou-pojo/src/main/java/cn/itcast/core/pojo/item/ItemCat.java" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-buyer/pingyougou-service-buyer.iml" afterPath="$PROJECT_DIR$/pingyougou-service-buyer/pingyougou-service-buyer.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-page/pingyougou-service-page.iml" afterPath="$PROJECT_DIR$/pingyougou-service-page/pingyougou-service-page.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-search/pingyougou-service-search.iml" afterPath="$PROJECT_DIR$/pingyougou-service-search/pingyougou-service-search.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-sellergoods/pingyougou-service-sellergoods.iml" afterPath="$PROJECT_DIR$/pingyougou-service-sellergoods/pingyougou-service-sellergoods.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-sellergoods/src/main/java/cn/itcast/core/service/itemcat/ItemCatServiceImpl.java" afterPath="$PROJECT_DIR$/pingyougou-service-sellergoods/src/main/java/cn/itcast/core/service/itemcat/ItemCatServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-service-user/pingyougou-service-user.iml" afterPath="$PROJECT_DIR$/pingyougou-service-user/pingyougou-service-user.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-manger/pingyougou-web-manger.iml" afterPath="$PROJECT_DIR$/pingyougou-web-manger/pingyougou-web-manger.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-manger/src/main/java/cn/itcast/core/controller/itemcat/ItemCatController.java" afterPath="$PROJECT_DIR$/pingyougou-web-manger/src/main/java/cn/itcast/core/controller/itemcat/ItemCatController.java" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/admin/item_cat.html" afterPath="$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/admin/item_cat.html" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/js/controller/itemCatController.js" afterPath="$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/js/controller/itemCatController.js" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/js/service/itemCatService.js" afterPath="$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/js/service/itemCatService.js" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-portal/pingyougou-web-portal.iml" afterPath="$PROJECT_DIR$/pingyougou-web-portal/pingyougou-web-portal.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-shop/pingyougou-web-shop.iml" afterPath="$PROJECT_DIR$/pingyougou-web-shop/pingyougou-web-shop.iml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-user/pingyougou-web-user.iml" afterPath="$PROJECT_DIR$/pingyougou-web-user/pingyougou-web-user.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/pingyougou-web-manger/target/" />
     <ignored path="$PROJECT_DIR$/pingyougou-service-search/target/" />
@@ -69,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/pingyougou-service-sellergoods/src/main/java/cn/itcast/core/service/itemcat/ItemCatServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="305">
-              <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+              <caret line="66" column="35" lean-forward="false" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1470#1471#0" expanded="true" />
@@ -82,8 +61,8 @@
       <file leaf-file-name="ItemCatController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pingyougou-web-manger/src/main/java/cn/itcast/core/controller/itemcat/ItemCatController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="347">
+              <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/admin/item_cat.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="22" column="62" lean-forward="true" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+              <caret line="22" column="62" lean-forward="false" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -105,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/js/service/itemCatService.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="567">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/js/service/goodsService.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+              <caret line="34" column="5" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -145,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/js/controller/goodsController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="11">
-              <caret line="80" column="48" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="80" selection-end-column="48" />
+              <caret line="80" column="48" lean-forward="false" selection-start-line="79" selection-start-column="4" selection-end-line="80" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -165,7 +144,7 @@
         <entry file="file://$PROJECT_DIR$/pingyougou-dao/src/main/resources/cn/itcast/core/dao/item/ItemCatDao.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="185" column="40" lean-forward="true" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
+              <caret line="185" column="40" lean-forward="false" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
               <folding>
                 <marker date="1550021634165" expanded="true" signature="3569:3664" ph="select id,pa... tb_item_cat" />
                 <marker date="1550021634165" expanded="true" signature="3748:3808" ph="delete from tb_item_cat... " />
@@ -705,7 +684,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -985,7 +964,7 @@
       <workItem from="1549952970562" duration="1531000" />
       <workItem from="1549958801505" duration="850000" />
       <workItem from="1549959666899" duration="788000" />
-      <workItem from="1550042855906" duration="2256000" />
+      <workItem from="1550042855906" duration="4749000" />
     </task>
     <task id="LOCAL-00001" summary="第一次上传">
       <created>1549953400297</created>
@@ -994,14 +973,22 @@
       <option name="project" value="LOCAL" />
       <updated>1549953400297</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加了分类审核模块,以及相关itemcat对象添加status属性,itemcatDao的mapper文件中updateBypermeateKeyServlet的sql语句修改,前端不页面修改但一定能用">
+      <created>1550045360057</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550045360057</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5425000" />
+    <option name="totallyTimeSpent" value="7918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1044,7 +1031,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次上传" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次上传" />
+    <MESSAGE value="添加了分类审核模块,以及相关itemcat对象添加status属性,itemcatDao的mapper文件中updateBypermeateKeyServlet的sql语句修改,前端不页面修改但一定能用" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了分类审核模块,以及相关itemcat对象添加status属性,itemcatDao的mapper文件中updateBypermeateKeyServlet的sql语句修改,前端不页面修改但一定能用" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1109,7 +1097,7 @@
     <entry file="file://$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/js/controller/goodsController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11">
-          <caret line="80" column="48" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="80" selection-end-column="48" />
+          <caret line="80" column="48" lean-forward="false" selection-start-line="79" selection-start-column="4" selection-end-line="80" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1117,7 +1105,7 @@
     <entry file="file://$PROJECT_DIR$/pingyougou-dao/src/main/resources/cn/itcast/core/dao/item/ItemCatDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="185" column="40" lean-forward="true" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
+          <caret line="185" column="40" lean-forward="false" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
           <folding>
             <marker date="1550021634165" expanded="true" signature="3569:3664" ph="select id,pa... tb_item_cat" />
             <marker date="1550021634165" expanded="true" signature="3748:3808" ph="delete from tb_item_cat... " />
@@ -1134,7 +1122,7 @@
     <entry file="file://$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/admin/item_cat.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="22" column="62" lean-forward="true" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+          <caret line="22" column="62" lean-forward="false" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -1150,7 +1138,7 @@
     <entry file="file://$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/js/service/goodsService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+          <caret line="34" column="5" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1166,7 +1154,7 @@
     <entry file="file://$PROJECT_DIR$/pingyougou-web-manger/src/main/webapp/js/service/itemCatService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1174,7 +1162,7 @@
     <entry file="file://$PROJECT_DIR$/pingyougou-service-sellergoods/src/main/java/cn/itcast/core/service/itemcat/ItemCatServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
-          <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+          <caret line="66" column="35" lean-forward="false" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1470#1471#0" expanded="true" />
@@ -1185,8 +1173,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pingyougou-web-manger/src/main/java/cn/itcast/core/controller/itemcat/ItemCatController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="347">
+          <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
