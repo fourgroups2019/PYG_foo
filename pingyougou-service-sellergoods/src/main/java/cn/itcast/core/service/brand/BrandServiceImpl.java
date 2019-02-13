@@ -87,5 +87,4 @@ public class BrandServiceImpl implements BrandService {
         return brandDao.selectOptionList();
     }
 
-
 }

@@ -31,4 +31,6 @@ public interface BrandService {
 
     //新增规格时初始化品牌列表
     public List<Map<String,String>> selectOptionList();
+
+
 }

@@ -14,6 +14,7 @@ public class Brand implements Serializable {
      * 品牌首字母
      */
     private String firstChar;
+    private String status;
 
     private static final long serialVersionUID = 1L;
 
@@ -39,6 +40,14 @@ public class Brand implements Serializable {
 
     public void setFirstChar(String firstChar) {
         this.firstChar = firstChar == null ? null : firstChar.trim();
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Override
