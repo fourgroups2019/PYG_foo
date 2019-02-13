@@ -9,9 +9,11 @@ import cn.itcast.core.pojo.item.Item;
 import cn.itcast.core.pojo.log.PayLog;
 import cn.itcast.core.pojo.order.Order;
 import cn.itcast.core.pojo.order.OrderItem;
+import cn.itcast.core.pojo.order.OrderQuery;
 import cn.itcast.core.utils.uniquekey.IdWorker;
 import com.alibaba.dubbo.config.annotation.Service;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
@@ -105,5 +107,22 @@ public class OrderServiceImpl implements OrderService {
         }
         // 订单提交成功后，清空购物车
         redisTemplate.boundHashOps("BUYER_CART").delete(username);
+    }
+
+    /**
+     * 订单发货
+     * @param orderId
+     * @param name
+     */
+    @Override
+    public void updateConsignStatus(Long orderId, String name) {
+        Order order = orderDao.selectByPrimaryKey(orderId);
+        if (order != null) {
+            order.setSellerId(name);  //商家id
+            order.setStatus("4");     //修改订单状态为已发货
+            order.setConsignTime(new Date());    //生成发货时间
+            orderDao.updateByPrimaryKeySelective(order);   //更改订单项
+
+        }
     }
 }
