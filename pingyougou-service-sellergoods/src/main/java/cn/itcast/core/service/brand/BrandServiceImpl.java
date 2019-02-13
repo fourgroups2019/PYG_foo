@@ -79,6 +79,8 @@ public class BrandServiceImpl implements BrandService {
             for (Long id : ids) {
                 brandDao.deleteByPrimaryKey(id);
             }
+
+
         }
     }
     //新增规格时初始化品牌列表
