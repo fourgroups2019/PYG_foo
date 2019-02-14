@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/goods")
 public class GoodsController {
+    //测试
     @Reference
     private GoodsService goodsService;
     @RequestMapping("/add.do")

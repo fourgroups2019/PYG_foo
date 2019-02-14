@@ -9,7 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6712000-a735-45a8-b53f-0384094601e1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pingyougou-web-shop/src/main/java/cn/itcast/core/controller/brand/BrandController.java" afterPath="$PROJECT_DIR$/pingyougou-web-shop/src/main/java/cn/itcast/core/controller/brand/BrandController.java" />
+      <change beforePath="$PROJECT_DIR$/pingyougou-web-shop/src/main/java/cn/itcast/core/controller/goods/GoodsController.java" afterPath="$PROJECT_DIR$/pingyougou-web-shop/src/main/java/cn/itcast/core/controller/goods/GoodsController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/pingyougou-web-manger/target/" />
     <ignored path="$PROJECT_DIR$/pingyougou-service-search/target/" />
@@ -61,8 +61,8 @@
       <file leaf-file-name="GoodsController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pingyougou-web-shop/src/main/java/cn/itcast/core/controller/goods/GoodsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="216">
+              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -155,6 +155,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -165,6 +170,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pingyougou-web-shop/src/main/java/cn/itcast/core/controller/brand/BrandController.java" />
+        <option value="$PROJECT_DIR$/pingyougou-web-shop/src/main/java/cn/itcast/core/controller/goods/GoodsController.java" />
       </list>
     </option>
   </component>
@@ -651,11 +657,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550056024122</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="第二次上传">
+      <created>1550057111533</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1550057111533</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30200000" />
+    <option name="totallyTimeSpent" value="30405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -725,7 +738,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次上传" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次上传" />
+    <MESSAGE value="第二次上传" />
+    <option name="LAST_COMMIT_MESSAGE" value="第二次上传" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1151,8 +1165,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pingyougou-web-shop/src/main/java/cn/itcast/core/controller/goods/GoodsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="216">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding />
         </state>
       </provider>
