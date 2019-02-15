@@ -23,4 +23,7 @@ public PageResult searchForManager(Integer page, Integer rows, Goods goods);
     public void updateStatus(Long[] ids,String status);
 //    删除商品
     public void delete(Long[] ids);
+
+    //商品上架
+    public void update_is_marketable(Long[] ids,String marketable);
 }

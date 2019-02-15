@@ -25,6 +25,12 @@ app.service('goodsService',function($http){
 	this.dele=function(ids){
 		return $http.get('../goods/delete.do?ids='+ids);
 	}
+
+    //商家商品的上下架
+    this.marketable=function(ids,marketable){
+        return $http.get('../goods/marketable.do?ids='+ids+"&marketable="+marketable);
+    }
+
 	//搜索
 	this.search=function(page,rows,searchEntity){
 		return $http.post('../goods/search.do?page='+page+"&rows="+rows, searchEntity);

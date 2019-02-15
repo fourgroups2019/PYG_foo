@@ -39,4 +39,9 @@
         <constructor-arg value="pinyougou_queue_static_delete"/>
     </bean>
 
+    <!-- 点对点模式，导入索引库-->
+    <bean id="queuemarketableDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="pinyougou_queue_marketable"/>
+    </bean>
+
 </beans>

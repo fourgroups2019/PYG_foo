@@ -67,6 +67,8 @@ public class GoodsServiceIpml implements GoodsService {
     @Resource
     private Destination queueStaticDeleteDestination;
 
+    @Resource
+    private Destination queuemarketableDestination;
 
     @Transactional
     @Override
@@ -317,7 +319,7 @@ public class GoodsServiceIpml implements GoodsService {
                 // 删除静态页面(不删除静态页)
                 if (goods.getIsDelete()=="1"){
                     //删除静态页面
-                  jmsTemplate.send(queueStaticDeleteDestination, new MessageCreator() {
+                  jmsTemplate.send(queuemarketableDestination, new MessageCreator() {
                       @Override
                       public Message createMessage(Session session) throws JMSException {
                           TextMessage textMessage = session.createTextMessage(String.valueOf(id));
@@ -336,6 +338,47 @@ public class GoodsServiceIpml implements GoodsService {
 
             }
         }
+    }
+
+//商品的上下架 更新索引库
+    @Override
+    public void update_is_marketable(Long[] ids, String marketable) {
+        if (ids!=null&&ids.length>0){
+            Goods goods = new Goods();
+            goods.setIsMarketable(marketable);
+        for (final Long id : ids) {
+            System.out.println(id);
+         if (marketable!=null&&"0".equals(goods.getIsMarketable())){
+             //上架
+             //全部库存的数据保存到索引库中
+             jmsTemplate.send(queuemarketableDestination, new MessageCreator() {
+                 @Override
+                 public Message createMessage(Session session) throws JMSException {
+                     TextMessage textMessage = session.createTextMessage(String.valueOf(id));
+                     return textMessage;
+                 }
+             });
+                 goods.setId(id);
+                 goodsDao.updateByPrimaryKeySelective(goods);
+               break;
+         }else {
+
+             //删除索引库中的数据  1,发送消息到消息队列
+             jmsTemplate.send(queueSolrDeleteDestination, new MessageCreator() {
+                 @Override
+                 public Message createMessage(Session session) throws JMSException {
+                     TextMessage textMessage = session.createTextMessage(String.valueOf(id));
+                     return textMessage;
+                 }
+             });
+             goods.setId(id);
+             goodsDao.updateByPrimaryKeySelective(goods);
+         }
+
+
+        }
+    }
+
     }
 
 

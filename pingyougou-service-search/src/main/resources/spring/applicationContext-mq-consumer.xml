@@ -44,4 +44,19 @@
     </bean>
     <bean id="itemDeleteListener" class="cn.itcast.core.listener.ItemDeleteListener"></bean>
 
+
+
+    <!-- 点对点模式，导入索引库-->
+    <bean id="queuemarketableDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="pinyougou_queue_marketable"/>
+    </bean>
+
+    <!-- 点对点模式, 消息监听容器  导入索引库-->
+    <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="connectionFactory" />
+        <property name="destination" ref="queuemarketableDestination" />
+        <property name="messageListener" ref="itemMarketableListener" />
+    </bean>
+    <bean id="itemMarketableListener" class="cn.itcast.core.listener.ItemMarketableListener"></bean>
+
 </beans>

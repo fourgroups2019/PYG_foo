@@ -7,6 +7,10 @@ public interface ItemSearchService {
     public Map<String,Object> search(Map<String,String> searchMap);
     //将审核通过后的商品对应的库存保存到索引库中
     public void updateItemToSolr(Long id);
+
+    //将审核通过后的商品对应的库存保存到索引库中
+    public void updateItemToSolrmarketable(Long ids);
+
    // 从索引库中删除商品
     public void deleteItemFromSolr(Long id);
 }

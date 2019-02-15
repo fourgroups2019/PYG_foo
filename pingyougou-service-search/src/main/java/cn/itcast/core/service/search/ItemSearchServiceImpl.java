@@ -79,6 +79,25 @@ public class ItemSearchServiceImpl implements ItemSearchService {
             solrTemplate.commit();
         }
     }
+    // 将上架通过后的商品对应的库存保存到索引库中
+    @Override
+    public void updateItemToSolrmarketable(Long ids) {
+        ItemQuery itemQuery = new ItemQuery();
+        itemQuery.createCriteria().andGoodsIdEqualTo(ids).andIsDefaultEqualTo("1").andStatusEqualTo("1");
+        List<Item> items = itemDao.selectByExample(itemQuery);;
+        if(items != null && items.size() > 0){
+            // 处理动态字段
+            for (Item item : items) {
+                // 栗子：{"机身内存":"16G","网络":"联通3G"}
+                String spec = item.getSpec();
+                // 拼接的动态字段：item_spec_机身内存 、 item_spec_网络
+                Map<String, String> specMap = JSON.parseObject(spec, Map.class);
+                item.setSpecMap(specMap);
+            }
+            solrTemplate.saveBeans(items);
+            solrTemplate.commit();
+        }
+    }
 
     @Override
     public void deleteItemFromSolr(Long id) {

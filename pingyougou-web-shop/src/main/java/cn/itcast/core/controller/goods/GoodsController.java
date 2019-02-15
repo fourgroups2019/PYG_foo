@@ -70,4 +70,17 @@ public class GoodsController {
             return new Result(false,"删除失败");
         }
     }
+
+    //商品的上下架 更新索引库
+    @RequestMapping("/marketable.do")
+    public Result update_is_marketable(Long[] ids,String marketable){
+        try {
+            goodsService.update_is_marketable(ids,marketable);
+            return new Result(true,"更新索引库成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Result(false,"更新索引库失败");
+
+        }
+    }
 }
