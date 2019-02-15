@@ -46,6 +46,7 @@ public class SpecificationServiceImpl implements SpecificationService {
     public void add(SpecificationVo specificationVo) {
 //        设置规格名称
         Specification specification = specificationVo.getSpecification();
+        specification.setStatus("0");
         specificationDao.insertSelective(specification);//设置自增获取自增主键
 //        获取规格选项
         List<SpecificationOption> specificationOptionList = specificationVo.getSpecificationOptionList();

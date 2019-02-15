@@ -12,6 +12,7 @@ public class Specification implements Serializable {
      * 名称
      */
     private String specName;
+    private String status;
 
     private static final long serialVersionUID = 1L;
 
@@ -29,6 +30,14 @@ public class Specification implements Serializable {
 
     public void setSpecName(String specName) {
         this.specName = specName == null ? null : specName.trim();
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Override

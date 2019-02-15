@@ -24,6 +24,7 @@ public class TypeTemplate implements Serializable {
      * 自定义属性
      */
     private String customAttributeItems;
+    private String status;
 
     private static final long serialVersionUID = 1L;
 
@@ -65,6 +66,14 @@ public class TypeTemplate implements Serializable {
 
     public void setCustomAttributeItems(String customAttributeItems) {
         this.customAttributeItems = customAttributeItems == null ? null : customAttributeItems.trim();
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Override

@@ -88,4 +88,19 @@ public class BrandServiceImpl implements BrandService {
         return brandDao.selectOptionList();
     }
 
+    /**
+     * 品牌申请
+     * @param brand
+     */
+    @Override
+    public void addBrand(Brand brand) {
+        // 判断品牌是否为空
+        // 不为空
+        if (brand != null && !"".equals(brand)) {
+           brand.setStatus("0");
+            brandDao.insertSelective(brand);
+        }
+
+    }
+
 }

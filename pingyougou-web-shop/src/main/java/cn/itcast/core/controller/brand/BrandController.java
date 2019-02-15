@@ -36,7 +36,7 @@ public class BrandController {
         @RequestMapping("/add.do")
         public Result add(@RequestBody Brand brand){
         try {
-            brandService.add(brand);
+            brandService.addBrand(brand);
             return new Result(true,"保存成功");
         } catch (Exception e) {
             e.printStackTrace();

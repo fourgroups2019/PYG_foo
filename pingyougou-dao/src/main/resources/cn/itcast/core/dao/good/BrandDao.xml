@@ -5,6 +5,7 @@
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="first_char" property="firstChar" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -66,7 +67,7 @@
   </sql>
   <sql id="Base_Column_List" >
     <if test="fields == null" >
-      id, name, first_char
+      id, name, first_char, status
     </if>
     <if test="fields != null" >
       ${fields}
@@ -88,7 +89,7 @@
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
-    id,name,first_char
+    id,name,first_char,status
     from tb_brand
     where id = #{id,jdbcType=BIGINT}
   </select>
@@ -103,9 +104,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="cn.itcast.core.pojo.good.Brand" >
-    insert into tb_brand (id, name, first_char
+    insert into tb_brand (id, name, first_char,status
       )
-    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{firstChar,jdbcType=VARCHAR}
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{firstChar,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="cn.itcast.core.pojo.good.Brand" >
@@ -120,6 +121,9 @@
       <if test="firstChar != null" >
         first_char,
       </if>
+      <if test="status != null" >
+        status,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -130,6 +134,9 @@
       </if>
       <if test="firstChar != null" >
         #{firstChar,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -151,6 +158,9 @@
       <if test="record.firstChar != null" >
         first_char = #{record.firstChar,jdbcType=VARCHAR},
       </if>
+      <if test="record.status != null" >
+        first_char = #{record.status,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -161,6 +171,7 @@
     set id = #{record.id,jdbcType=BIGINT},
       name = #{record.name,jdbcType=VARCHAR},
       first_char = #{record.firstChar,jdbcType=VARCHAR}
+      first_char = #{record.status,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -174,6 +185,9 @@
       <if test="firstChar != null" >
         first_char = #{firstChar,jdbcType=VARCHAR},
       </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
@@ -181,6 +195,7 @@
     update tb_brand
     set name = #{name,jdbcType=VARCHAR},
       first_char = #{firstChar,jdbcType=VARCHAR}
+      status = #{status,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <select id="selectOptionList" resultType="map">

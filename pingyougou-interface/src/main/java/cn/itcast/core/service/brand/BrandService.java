@@ -33,4 +33,9 @@ public interface BrandService {
     public List<Map<String,String>> selectOptionList();
 
 
+    /**
+     * 品牌申请
+     * @param brand
+     */
+    void addBrand(Brand brand);
 }

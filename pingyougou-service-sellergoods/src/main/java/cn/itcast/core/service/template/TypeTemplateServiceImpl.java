@@ -62,6 +62,7 @@ public class TypeTemplateServiceImpl implements TypeTemplateService{
     @Transactional
     @Override
     public void add(TypeTemplate typeTemplate) {
+        typeTemplate.setStatus("0");
         typeTemplateDao.insertSelective(typeTemplate);
     }
 //回显

@@ -7,6 +7,7 @@
     <result column="spec_ids" property="specIds" jdbcType="VARCHAR" />
     <result column="brand_ids" property="brandIds" jdbcType="VARCHAR" />
     <result column="custom_attribute_items" property="customAttributeItems" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -68,7 +69,7 @@
   </sql>
   <sql id="Base_Column_List" >
     <if test="fields == null" >
-      id, name, spec_ids, brand_ids, custom_attribute_items
+      id, name, spec_ids, brand_ids, custom_attribute_items, status
     </if>
     <if test="fields != null" >
       ${fields}
@@ -90,7 +91,7 @@
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
-    id,name,spec_ids,brand_ids,custom_attribute_items
+    id,name,spec_ids,brand_ids,custom_attribute_items,status
     from tb_type_template
     where id = #{id,jdbcType=BIGINT}
   </select>
@@ -106,9 +107,9 @@
   </delete>
   <insert id="insert" parameterType="cn.itcast.core.pojo.template.TypeTemplate" >
     insert into tb_type_template (id, name, spec_ids, 
-      brand_ids, custom_attribute_items)
+      brand_ids, custom_attribute_items, status)
     values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{specIds,jdbcType=VARCHAR}, 
-      #{brandIds,jdbcType=VARCHAR}, #{customAttributeItems,jdbcType=VARCHAR})
+      #{brandIds,jdbcType=VARCHAR}, #{customAttributeItems,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="cn.itcast.core.pojo.template.TypeTemplate" >
     insert into tb_type_template
@@ -128,6 +129,9 @@
       <if test="customAttributeItems != null" >
         custom_attribute_items,
       </if>
+      <if test="status != null" >
+        status,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -144,6 +148,9 @@
       </if>
       <if test="customAttributeItems != null" >
         #{customAttributeItems,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -171,6 +178,9 @@
       <if test="record.customAttributeItems != null" >
         custom_attribute_items = #{record.customAttributeItems,jdbcType=VARCHAR},
       </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -183,6 +193,7 @@
       spec_ids = #{record.specIds,jdbcType=VARCHAR},
       brand_ids = #{record.brandIds,jdbcType=VARCHAR},
       custom_attribute_items = #{record.customAttributeItems,jdbcType=VARCHAR}
+    status = #{record.status,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -202,6 +213,9 @@
       <if test="customAttributeItems != null" >
         custom_attribute_items = #{customAttributeItems,jdbcType=VARCHAR},
       </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
@@ -211,6 +225,7 @@
       spec_ids = #{specIds,jdbcType=VARCHAR},
       brand_ids = #{brandIds,jdbcType=VARCHAR},
       custom_attribute_items = #{customAttributeItems,jdbcType=VARCHAR}
+      status = #{status,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>
